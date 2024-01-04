@@ -5,7 +5,7 @@ import { comparePassword, hashPassword } from '../helpers/authHelper.js';
 const loginController = async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
-    if (!user) {
+    if (!user) { 
         return res.send({
             success: false,
             message: "user does not exist please register"
